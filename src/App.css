@@ -1,11 +1,37 @@
 @font-face {
+  font-family: 'Kernit';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/Kernit-Filled.eot'); /* IE9 Compat Modes */
+  src: url('./fonts/Kernit-Filled.eot') format('embedded-opentype'),
+    /* IE6-IE8 */ url('./fonts/Kernit-Filled.woff2') format('woff2'),
+    /* Super Modern Browsers */ url('./fonts/Kernit-Filled.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Kreon';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/Kreon-Regular.ttf') format('truetype');
+}
+body {
+  font-family: 'Open Sans';
+  background-color: #158faa;
 }
 
 h1#title {
-  color: white;
+  color: #2e2278;
   text-align: center;
-  width: 100%;
-  margin: 100px 0px;
+  width: 30%;
+  height: auto;
+  margin: 0px auto;
+  font-family: 'Kernit';
+  font-size: 3rem;
+}
+
+#titlecontainer {
+  margin-top: 50px;
+  margin-bottom: 100px;
 }
 
 div#swatchPalette {
@@ -13,4 +39,17 @@ div#swatchPalette {
   margin: 50px auto;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  font-family: 'Kreon';
+}
+
+#colophon {
+  font-family: 'Kreon';
+  text-align: center;
+}
+
+h2#directions {
+  text-align: center;
+  font-family: 'Kreon';
+  margin-bottom: 40px;
 }
