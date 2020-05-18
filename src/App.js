@@ -33,9 +33,9 @@ function App() {
   return (
     <div className='App'>
       <div id='titlecontainer'>
-        <h1 id='title'>What is</h1>
-        <h1 id='title'>Your Name's Aura</h1>
-        <h1 id='title'>?</h1>
+        <h1 className='title'>What is</h1>
+        <h1 className='title'>Your Name's Aura</h1>
+        <h1 className='title'>?</h1>
       </div>
       <h2 id='directions'>Enter Text Here</h2>
       <TextInput func={handleChange} />

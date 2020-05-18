@@ -16,11 +16,11 @@
 }
 body {
   font-family: 'Open Sans';
-  background-color: #158faa;
+  background-color: rgba(21, 143, 170, 0.58);
 }
 
-h1#title {
-  color: #2e2278;
+h1.title {
+  color: rgba(46, 34, 120, 0.79);
   text-align: center;
   width: 30%;
   height: auto;
@@ -46,10 +46,12 @@ div#swatchPalette {
 #colophon {
   font-family: 'Kreon';
   text-align: center;
+  color: #fff2ff;
 }
 
 h2#directions {
   text-align: center;
   font-family: 'Kreon';
   margin-bottom: 40px;
+  color: #fff2ff;
 }
