@@ -9,24 +9,71 @@
 }
 
 @font-face {
+  font-family: 'Kernit Outline';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/Kernit-Outline.eot'); /* IE9 Compat Modes */
+  src: url('./fonts/Kernit-Outline.eot') format('embedded-opentype'),
+    /* IE6-IE8 */ url('./fonts/Kernit-Outline.woff2') format('woff2'),
+    /* Super Modern Browsers */ url('./fonts/Kernit-Outline.woff')
+      format('woff');
+}
+@font-face {
   font-family: 'Kreon';
   font-style: normal;
   font-weight: 400;
   src: url('./fonts/Kreon-Regular.ttf') format('truetype');
 }
-body {
-  font-family: 'Open Sans';
-  background-color: rgba(21, 143, 170, 0.58);
+
+div.inputcontainer {
+  width: 500px;
+  text-align: center;
+}
+
+div.inputcontainer input {
+  height: 100px;
+  width: 500px;
+  font-size: 4rem;
+  border-radius: 20px;
+  border: 0;
+  font-family: 'Kreon';
+  background-color: #dddddd;
+  color: white;
+  text-align: center;
 }
 
 h1.title {
   color: rgba(46, 34, 120, 0.79);
   text-align: center;
-  width: 30%;
   height: auto;
   margin: 0px auto;
   font-family: 'Kernit';
-  font-size: 3rem;
+  font-size: 5rem;
+  -webkit-transform: scale(1.2, 1);
+}
+h1.title span#cutout {
+  font-family: 'Kernit Outline' !important;
+  color: #08c2d7;
+}
+
+h1.title span#gradient {
+  background-image: linear-gradient(to right, #22b0dd, #cd06dd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2#directions {
+  width: 25%;
+  margin: 25px auto;
+}
+div#titlecontainer {
+  width: 650px;
+  padding: 25px 0;
+  margin: 0 auto;
+  border-radius: 20px;
+  background-color: #1d1665;
+  text-align: center;
+  margin-top: 150px;
 }
 
 #titlecontainer {
@@ -54,4 +101,99 @@ h2#directions {
   font-family: 'Kreon';
   margin-bottom: 40px;
   color: #fff2ff;
+}
+
+/* From Codepen */
+.box:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes moving-gradient {
+  0% {
+    background-position: 0 0;
+    filter: opacity 0.5;
+  }
+  50% {
+    background-position: 400% 0;
+    opacity: 1;
+  }
+  100% {
+    background-position: 0 0;
+    opacity: 0.5;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.container,
+.box h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.box h1 {
+  width: 100%;
+  top: 45% !important;
+}
+
+.box {
+  border: none;
+  outline: none;
+  color: #fff;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.box:before {
+  content: '';
+  background: linear-gradient(
+    135deg,
+    #fd1d1d,
+    #d62976,
+    #fa7e1e,
+    #feda75,
+    #48ff00,
+    #00ffd5,
+    #4f5bd5,
+    #7a00ff,
+    #962fbf,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(20px);
+  width: 102%;
+  height: 102%;
+  animation: moving-gradient 30s linear infinite;
+  border-radius: 10px;
+}
+
+div#codecontainer {
+  background-color: black;
+  color: white;
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+  font-size: 1.2rem;
+  border-radius: 5px;
 }
